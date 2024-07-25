@@ -27,12 +27,12 @@ return routes
 const App = () => {
   return (
     <>
-    <ShopprCartContext.Provider>
+    <ShopprCartProvider>
       <BrowserRouter>
         <AppRoutes/>
         <Navbar/>
       </BrowserRouter>
-      </ShopprCartContext.Provider>
+      </ShopprCartProvider>
     </>
   )
 }
