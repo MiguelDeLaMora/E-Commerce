@@ -14,6 +14,11 @@ const AppRoutes = () => {
   
     let routes = useRoutes([
       {path: '/', element: <Home />},
+      {path: '/clothing-men', element: <Home />},
+      {path: '/clothing-woman', element: <Home />},
+      {path: '/jewelery', element: <Home />},
+      {path: '/electronics', element: <Home />},
+      {path: '/others', element: <Home />},
       {path: '/my-account', element: <MyAccount />},
       {path: '/my-order', element: <MyOrder />},
       {path: '/my-orders', element: <MyOrders />},
@@ -29,15 +34,15 @@ return routes
 
 const App = () => {
   return (
-    <>
+    
     <ShopprCartProvider>
       <BrowserRouter>
         <AppRoutes/>
         <Navbar/>
        <CheckOutSideMenu />
       </BrowserRouter>
-      </ShopprCartProvider>
-    </>
+    </ShopprCartProvider>
+    
   )
 }
 
