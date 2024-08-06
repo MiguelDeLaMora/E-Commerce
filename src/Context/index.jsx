@@ -50,7 +50,7 @@ export const ShopprCartProvider = ({children}) => {
       }
     
       const filteredItemsByCategory = (items, searchByCategory) => {
-        return items?.filter(item => item.category.name.toLowerCase().includes(searchByCategory.toLowerCase()))
+        return items?.filter(item => item.category.toLowerCase().includes(searchByCategory.toLowerCase()))
       }
     
       const filterBy = (searchType, items, searchByTitle, searchByCategory) => {

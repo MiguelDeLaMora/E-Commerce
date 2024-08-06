@@ -19,8 +19,8 @@ const Navbar = () => {
                     <NavLink 
                     to='/'
                     onClick={() => context.setSearchByCategory()}
-                    className={
-                        ({isActive}) => isActive ? activeStyle : undefined
+                    className={({isActive}) => 
+                        isActive ? activeStyle : undefined
                     }>
                         All
                     </NavLink>
@@ -28,7 +28,7 @@ const Navbar = () => {
                 <li>
                     <NavLink 
                     to='/clothing-men'
-                    onClick={() => context.setSearchByCategory('clothing-men')}
+                    onClick={() => context.setSearchByCategory("men's clothing")}
                     className={
                         ({isActive}) => isActive ? activeStyle : undefined
                     }>
@@ -38,7 +38,7 @@ const Navbar = () => {
                 <li>
                     <NavLink 
                     to='/clothing-woman'
-                    onClick={() => context.setSearchByCategory('clothing-woman')}
+                    onClick={() => context.setSearchByCategory("women's clothing")}
                     className={
                         ({isActive}) => isActive ? activeStyle : undefined
                     }>
@@ -65,16 +65,7 @@ const Navbar = () => {
                         Electronics
                     </NavLink>
                 </li>
-                <li>
-                    <NavLink 
-                    to='/others'
-                    onClick={() => context.setSearchByCategory('others')}
-                    className={
-                        ({isActive}) => isActive ? activeStyle : undefined
-                    }>
-                        Others
-                    </NavLink>
-                </li>
+               
             </ul>
             <ul className='flex items-center gap-3'>
                 <li className='text-black/60'>
@@ -109,7 +100,7 @@ const Navbar = () => {
                 </li>
                 <li className='flex items-center'>                   
                 <ShoppingCartIcon className='h-6 w-6 text-black'></ShoppingCartIcon> 
-                <div>{context.count}</div>       
+                <div>{context.cartProducts.length}</div>       
                 </li>
             </ul>
         </nav>
